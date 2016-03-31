@@ -32,13 +32,14 @@ We don't provide a *screen* variable in this plugin (as said in the official
 documentation on js_of_ocaml). If we did, *screen* will be set to **undefined**
 because the *screen* object doesn't exist when we create the variable.
 
-Instead, we provide a function *screen_orientation* of type *unit -> screen_orientation Js.t* which creates the
-binding to the *screen* javascript object. You must call it when the deviceready
-event is handled, eg
+Instead, we provide a function *Screen_orientation.screen_orientation* of type
+*unit -> Screen_orientation.screen_orientation Js.t* which creates the binding
+to the *screen* javascript object. You must call it when the deviceready event
+is handled, eg
 
 ```OCaml
-let on_device_ready =
-  let screen = Screenorientation.screen_orientation () in
+let on_device_ready _ =
+  let screen = Screen_orientation.screen_orientation () in
   (* Some code *)
 
 let _ =
