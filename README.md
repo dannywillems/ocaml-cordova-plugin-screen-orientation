@@ -41,17 +41,13 @@ but we **recommend** to use the gen_js_api version which is the master branch.
 The plugin creates a new object called *screen*, but the object is
 available when the *deviceready* event is handled.
 
-We don't provide a *screen* variable in this plugin (as said in the official
-documentation on js_of_ocaml). If we did, *screen* will be set to **undefined**
-because the *screen* object doesn't exist when we create the variable.
-
-Instead, we provide a function *Screenorientation.t* of type *unit -> screen_orientation* which creates the
+We provide a function *Screen_orientation.t* of type *unit -> Screen_orientation.screen_orientation* which creates the
 binding to the *screen* javascript object. You must call it when the deviceready
 event is handled, eg
 
 ```OCaml
 let on_device_ready _ =
-  let screen = Screenorientation.t () in
+  let screen = Screen_orientation.t () in
   (* Some code *)
 
 let _ =
