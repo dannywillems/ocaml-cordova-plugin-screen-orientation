@@ -1,13 +1,10 @@
 # ocaml-cordova-plugin-screen-orientation
 
-**Currently only for iOS**
-
 Binding to
 [cordova-plugin-screen-orientation](https://github.com/gbenvenuti/cordova-plugin-screen-orientation)
 
 [Example
 application](https://github.com/dannywillems/ocaml-cordova-plugin-screen-orientation-example).
-**Not developed**
 
 ## What does cordova-plugin-screen-orientation do ?
 
