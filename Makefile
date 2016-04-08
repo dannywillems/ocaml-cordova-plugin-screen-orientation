@@ -1,8 +1,4 @@
-################################################################################
-MLI_FILE		= cordova_screen_orientation.mli
-## Name which will be used in -package with ocamlfind
-LIB_NAME		= cordova-plugin-screen-orientation
-################################################################################
+include Makefile.conf
 
 ################################################################################
 CC				= ocamlc
