@@ -8,7 +8,6 @@ Binding to
 
 [Example
 application](https://github.com/dannywillems/ocaml-cordova-plugin-screen-orientation-example).
-**Not developed**
 
 ## What does cordova-plugin-screen-orientation do ?
 
