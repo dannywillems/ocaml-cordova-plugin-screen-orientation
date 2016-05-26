@@ -57,22 +57,3 @@ cordova plugin add cordova-plugin-screen-orientation
 ## How to use ?
 
 * See the [official documentation](https://github.com/gbenvenuti/cordova-plugin-screen-orientation)
-
-## ! BE CAREFUL !
-
-The plugin creates a new object called *screen*, but the object is
-available when the *deviceready* event is handled.
-
-We provide a function *Cordova_screen_orientation.t* of type *unit -> Cordova_screen_orientation.screen_orientation* which creates the
-binding to the *screen* javascript object. You must call it when the deviceready
-event is handled, eg
-
-```OCaml
-let on_device_ready _ =
-  let screen = Cordova_screen_orientation.t () in
-  (* Some code *)
-
-let _ =
-  Dom.addEventListener Dom_html.document (Dom.Event.make "deviceready")
-  (Dom_html.handler on_device_ready) Js._false
-```
