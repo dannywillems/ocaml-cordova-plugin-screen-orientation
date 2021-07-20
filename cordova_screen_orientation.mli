@@ -6,6 +6,7 @@ type orientation_type =
   | Landscape_secondary [@js "landscape-secondary"]
   | Portrait [@js "portrait"]
   | Landscape [@js "landscape"]
+  | Any [@js "any"]
   [@@js.enum]
 
 [@@@js.stop]
@@ -19,6 +20,7 @@ let orientation_type_to_str c = match c with
   | Landscape_secondary -> "landscape-secondary"
   | Portrait -> "portrait"
   | Landscape -> "landscape"
+  | Any -> "any"
 ]
 (* --------------------------------------------------------------------------- *)
 
