@@ -17,6 +17,9 @@ install: [make "install"]
 remove: [make "remove"]
 
 depends: [
+  "ocaml" { >= "4.08.0" }
   "gen_js_api"
+  "js_of_ocaml" {>= "3.8.0" & < "3.9.0"}
+  "js_of_ocaml-ppx" {>= "3.8.0" & < "3.9.0"}
 ]
-available: [ ocaml-version >= "4.03.0" ]
+available: [ ocaml-version >= "4.03.0"]

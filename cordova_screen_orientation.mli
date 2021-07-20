@@ -32,3 +32,52 @@ val orientation          : orientation_type
 val unlock_orientation   : unit -> unit
 [@@js.global "screen.unlockOrientation"]
 (* --------------------------------------------------------------------------- *)
+
+[@@@js.stop]
+
+val screen_available : unit -> bool
+
+val orientation_available : unit -> bool
+
+(*
+val lock_then : orientation_type -> callback:(unit -> unit) -> unit
+
+val unlock_then : orientation_type -> unit -> unit
+*)
+
+[@@@js.start]
+
+[@@@js.implem
+ let screen_available () =
+   Js_of_ocaml.Js.Optdef.test
+     Js_of_ocaml.Js.Unsafe.global##.screen
+]
+
+[@@@js.implem
+ let orientation_available () =
+   Js_of_ocaml.Js.Optdef.test
+     Js_of_ocaml.Js.Unsafe.global##.screen##.orientation
+]
+
+(* TODO à finir et à tester ...*)
+
+(*
+[@@@js.implem
+ let lock_then () =
+
+]
+ *)
+
+val lock_then :
+  lock:(orientation_type -> unit)
+  -> callback:(unit -> unit)
+  -> unit
+[@@js.global "screen.orientation.lock.then"]
+
+
+val unlock_then : unlock:(unit -> unit) -> callback:(unit -> unit) -> unit
+[@@js.global "screen.orientation.unlock.then"]
+
+(*Pas sûre, renvoie des string?*)
+val get_orientation_type : unit -> string
+[@@js.global "screen.orientation.type_"]
