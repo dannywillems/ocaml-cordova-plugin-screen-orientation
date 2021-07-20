@@ -68,8 +68,9 @@ val unlock_then : orientation_type -> unit -> unit
 ]
  *)
 
+(*
 val lock_then :
-  lock:(orientation_type -> unit)
+  lock:(orientation_type ->unit)
   -> callback:(unit -> unit)
   -> unit
 [@@js.global "screen.orientation.lock.then"]
@@ -77,7 +78,8 @@ val lock_then :
 
 val unlock_then : unlock:(unit -> unit) -> callback:(unit -> unit) -> unit
 [@@js.global "screen.orientation.unlock.then"]
+ *)
 
-(*Pas sûre, renvoie des string?*)
+(*Pas sûr, renvoie des string?*)
 val get_orientation_type : unit -> string
 [@@js.global "screen.orientation.type_"]
