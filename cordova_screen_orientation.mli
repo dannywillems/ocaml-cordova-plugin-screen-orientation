@@ -33,6 +33,7 @@ val unlock_orientation   : unit -> unit
 [@@js.global "screen.unlockOrientation"]
 (* --------------------------------------------------------------------------- *)
 
+(*
 [@@@js.stop]
 
 val screen_available : unit -> bool
@@ -83,3 +84,4 @@ val unlock_then : unlock:(unit -> unit) -> callback:(unit -> unit) -> unit
 (*Pas sûr, renvoie des string?*)
 val get_orientation_type : unit -> string
 [@@js.global "screen.orientation.type_"]
+ *)
